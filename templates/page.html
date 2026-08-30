@@ -2,20 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>{{ section.title }}</title>
+    <title>{{ page.title }}</title>
     <link rel="stylesheet" href="{{ get_url(path='style.css') }}">
   </head>
   <body>
     <header>
-      <h1>{{ section.title }}</h1>
+      <h1>{{ page.title }}</h1>
       <p class="subtitle">
-        {% for item in section.extra.subtitle %}
+        {% for item in page.extra.subtitle %}
         <span>{{ item }}</span>
         {% endfor %}
       </p>
     </header>
     <main>
-      {{ section.content | safe }}
+      {{ page.content | safe }}
     </main>
     <footer>
       <div>
@@ -27,7 +27,7 @@
         </span>
       </div>
       <div>
-        <span>last updated: {{ section.extra.updated }}</span>
+        <span>last updated: {{ page.extra.updated }}</span>
         <span>2026 kong wing wu</span>
       </div>
     </footer>
