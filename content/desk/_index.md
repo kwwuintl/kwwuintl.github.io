@@ -4,7 +4,8 @@ title = "desk"
 [extra]
 subtitle = [
   "books",
-  "papers"
+  "papers",
+  "<a href=\"/pdf.js/web/viewer.html?file=\">pdf.js viewer</a>"
 ]
 updated = "2026-08-31"
 +++
