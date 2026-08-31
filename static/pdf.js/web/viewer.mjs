@@ -598,7 +598,7 @@ const defaultOptions = new Map([["allowedGlobalEvents", {
   value: "./debugger.mjs",
   kind: OptionKind.VIEWER
 }], ...[["defaultUrl", {
-  value: "compressed.tracemonkey-pldi-09.pdf",
+  value: "",
   kind: OptionKind.VIEWER
 }]], ["defaultZoomDelay", {
   value: 400,
