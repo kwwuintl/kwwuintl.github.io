@@ -1,0 +1,38 @@
+{% macro render(item) %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ item.title }}</title>
+    <link rel="stylesheet" href="{{ get_url(path='style.css') }}">
+  </head>
+  <body>
+    <header>
+      <h1>{{ item.title }}</h1>
+      <p class="subtitle">
+        {% for value in item.extra.subtitle %}
+        <span>{{ value }}</span>
+        {% endfor %}
+      </p>
+    </header>
+    <main>
+      {{ item.content | safe }}
+    </main>
+    <footer>
+      <div>
+        <span>
+          <a href="mailto:kwwuintl23@outlook.com">email</a>
+        </span>
+        <span>
+          <a href="https://github.com/kwwuintl">github</a>
+        </span>
+      </div>
+      <div>
+        <span>last updated: {{ item.extra.updated }}</span>
+        <span>2026 kong wing wu</span>
+      </div>
+    </footer>
+  </body>
+</html>
+{% endmacro %}
