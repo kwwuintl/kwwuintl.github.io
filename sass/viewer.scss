@@ -7,6 +7,6 @@
   }
 }
 
-body {
-  font-family: "IBM Plex Mono";
+*, *::before, *::after {
+  font-family: "IBM Plex Mono" !important;
 }
