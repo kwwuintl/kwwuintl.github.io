@@ -36,13 +36,13 @@ updated = "2026-08-31"
   elim :
     @ ( A : Sort )
     @ ( a : A )
-    @ ( motive :
+    @ ( P :
           @ ( b : A )
           @ ( _ : self A a b )
             Sort )
-    @ ( _ : motive a ( refl A a ) )
+    @ ( _ : P a ( refl A a ) )
     @ ( b : A )
-    @ ( t : self A a b ) motive b t ;
+    @ ( t : self A a b ) P b t ;
 }
 ```
 
