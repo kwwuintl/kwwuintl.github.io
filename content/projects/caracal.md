@@ -112,6 +112,6 @@ updated = "2026-08-31"
   Quiver = "Quiver.crcl" self ;
 } inductive {
   self : Sort ;
-  make : _
+  make : _ ;
 }
 ```

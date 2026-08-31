@@ -12,5 +12,5 @@ updated = "2026-08-18"
 
 > Someone who likes things that do not yet have names.
 
-- [gr](projects/gr)
+- [gaussian rank](projects/gaussian_rank)
 - [caracal](projects/caracal)
