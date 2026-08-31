@@ -22,24 +22,47 @@ updated = "2026-08-31"
 }
 ```
 
+```crcl
+{
+  self :
+    @ ( A : Sort )
+    @ ( _ : A )
+    @ ( _ : A )
+      Sort ;
+  refl :
+    @ ( A : Sort )
+    @ ( a : A )
+      self A a a ;
+  elim :
+    @ ( A : Sort )
+    @ ( a : A )
+    @ ( motive :
+          @ ( b : A )
+          @ ( _ : self A a b )
+            Sort )
+    @ ( _ : motive a ( refl A a ) )
+    @ ( b : A )
+    @ ( t : self A a b ) motive b t ;
+}
+```
+
 ```crcl,linenos,name=Quiver.crcl
-@ { } {
-  self = inductive {
-    self : Sort ;
-    make :
-      @ ( Obj : Sort )
-      @ ( Hom :
-            @ ( A : Obj )
-            @ ( B : Obj )
-              Sort )
-        self ;
-  } ;
+@ { } inductive {
+  self : Sort ;
+  make :
+    @ ( Obj : Sort )
+    @ ( Hom :
+          @ ( A : Obj )
+          @ ( B : Obj )
+            Sort )
+      self ;
+} + {
   Obj :
     @ ( Q : self )
       Sort
   =
     @ ( Q : self )
-      self.rec Q
+      self.elim Q
         (
           @ ( Obj : Sort )
           @ ( Hom :
@@ -54,7 +77,7 @@ updated = "2026-08-31"
       Sort
   =
     @ ( Q : self )
-      self.rec Q
+      self.elim Q
         (
           @ ( Obj : Sort )
           @ ( Hom :
@@ -71,10 +94,8 @@ updated = "2026-08-31"
 @ {
   Eq = "Eq.crcl" self ;
   Quiver = "Quiver.crcl" self ;
-} {
-  self = inductive {
-    self : Sort ;
-    make : _
-  } ;
+} inductive {
+  self : Sort ;
+  make : _
 }
 ```
