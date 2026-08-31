@@ -19,6 +19,18 @@ updated = "2026-08-31"
     @ ( A : Sort )
     @ ( a : A )
       self A a a ;
+} + {
+  symm :
+    @ ( A : Sort )
+    @ ( a : A )
+    @ ( b : A )
+    @ ( self A a b )
+      self A b a
+  =
+    @ A @ a @ b @ t
+      self.elim A a
+        ( @ b @ _ self A b a )
+        ( self.refl A a ) b t ;
 }
 ```
 
@@ -43,6 +55,12 @@ updated = "2026-08-31"
     @ ( _ : P a ( refl A a ) )
     @ ( b : A )
     @ ( t : self A a b ) P b t ;
+  symm :
+    @ ( A : Sort )
+    @ ( a : A )
+    @ ( b : A )
+    @ ( _ : self.self A a b )
+      self.self A b a ;
 }
 ```
 
@@ -62,14 +80,13 @@ updated = "2026-08-31"
       Sort
   =
     @ ( Q : self )
-      self.elim Q
-        (
-          @ ( Obj : Sort )
-          @ ( Hom :
-                @ ( A : Obj )
-                @ ( B : Obj )
-                  Sort )
-            Obj ) ;
+      self.elim Q (
+        @ ( Obj : Sort )
+        @ ( Hom :
+              @ ( A : Obj )
+              @ ( B : Obj )
+                Sort )
+          Obj ) ;
   Hom :
     @ ( Q : self )
     @ ( A : self.Obj Q )
@@ -77,16 +94,15 @@ updated = "2026-08-31"
       Sort
   =
     @ ( Q : self )
-      self.elim Q
-        (
-          @ ( Obj : Sort )
-          @ ( Hom :
-                @ ( A : Obj )
-                @ ( B : Obj )
-                  Sort )
-          @ ( A : Obj )
-          @ ( B : Obj )
-            Hom A B ) ;
+      self.elim Q (
+        @ ( Obj : Sort )
+        @ ( Hom :
+              @ ( A : Obj )
+              @ ( B : Obj )
+                Sort )
+        @ ( A : Obj )
+        @ ( B : Obj )
+          Hom A B ) ;
 }
 ```
 
