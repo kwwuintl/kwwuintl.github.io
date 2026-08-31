@@ -10,9 +10,7 @@ subtitle = [
 updated = "2026-08-18"
 +++
 
-likes mathematics and things that do not yet have names
+> Someone who likes things that do not yet have names.
 
-## projects
-
-- [project one](#)
-- [project two](#)
+- [gr](projects/gr)
+- [tt](projects/tt)

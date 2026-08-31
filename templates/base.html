@@ -1,23 +1,36 @@
-{% macro render(item) %}
+{% macro render(title, subtitle, content, updated) %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{{ item.title }}</title>
+    <title>{{ title }}</title>
     <link rel="stylesheet" href="{{ get_url(path='style.css') }}">
   </head>
   <body>
     <header>
-      <h1>{{ item.title }}</h1>
+      <nav>
+        <span>
+          <a href="javascript:history.back()">back</a>
+        </span>
+        <span>
+          <a href="javascript:history.forward()">forward</a>
+        </span>
+        <span>
+          <a href="..">parent</a>
+        </span>
+      </nav>
+      <h1>{{ title }}</h1>
+      {% if subtitle %}
       <p class="subtitle">
-        {% for value in item.extra.subtitle %}
+        {% for value in subtitle %}
         <span>{{ value }}</span>
         {% endfor %}
       </p>
+      {% endif %}
     </header>
     <main>
-      {{ item.content | safe }}
+      {{ content | safe }}
     </main>
     <footer>
       <div>
@@ -29,7 +42,9 @@
         </span>
       </div>
       <div>
-        <span>last updated: {{ item.extra.updated }}</span>
+        {% if updated %}
+        <span>last updated: {{ updated }}</span>
+        {% endif %}
         <span>2026 kong wing wu</span>
       </div>
     </footer>

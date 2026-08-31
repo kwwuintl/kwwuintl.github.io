@@ -9,7 +9,7 @@ subtitle = [
 updated = "2026-08-31"
 +++
 
-<hr>
+> This desk is not intended for visitors.
 
 - [0058/0252] [Category Theory in Context](https://emilyriehl.github.io/files/context.pdf)
 - [0000/0388] [Elements of &infin;-Category Theory](https://emilyriehl.github.io/files/elements.pdf)
@@ -33,5 +33,3 @@ updated = "2026-08-31"
 <br>
 
 - [0000/0560] [The Theory of Quantum Information](https://jhwatrous.github.io/TQI.pdf)
-
-<hr>

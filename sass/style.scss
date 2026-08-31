@@ -64,6 +64,17 @@ header {
   margin: 4rem 0;
 }
 
+nav {
+  text-align: right;
+
+  color: var(--base04);
+  font-size: 0.8rem;
+
+  span:not(:last-child)::after {
+    content: " - ";
+  }
+}
+
 h1 {
   margin: 0;
   font-size: 1.6rem;
@@ -72,6 +83,10 @@ h1 {
 
 p {
   margin: 0;
+}
+
+blockquote {
+  margin: 2rem 0;
 }
 
 .subtitle {
