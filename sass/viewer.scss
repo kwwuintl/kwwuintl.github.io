@@ -7,6 +7,10 @@
   }
 }
 
-*, *::before, *::after {
-  font-family: "IBM Plex Mono" !important;
+/* *, *::before, *::after { */
+  /* font-family: "IBM Plex Mono" !important; */
+/* } */
+
+body {
+  font-family: "IBM Plex Mono";
 }
