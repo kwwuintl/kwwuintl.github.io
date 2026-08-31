@@ -5,7 +5,7 @@ title = "kong wing wu"
 subtitle = [
   "category theory",
   "quantum theory",
-  "biology"
+  "biology",
 ]
 updated = "2026-08-18"
 +++
@@ -13,4 +13,4 @@ updated = "2026-08-18"
 > Someone who likes things that do not yet have names.
 
 - [gr](projects/gr)
-- [tt](projects/tt)
+- [caracal](projects/caracal)

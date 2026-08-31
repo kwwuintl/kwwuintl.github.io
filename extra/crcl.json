@@ -1,0 +1,59 @@
+{
+  "name": "crcl",
+  "scopeName": "source.crcl",
+  "patterns": [
+    {
+      "begin": "\"",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.begin.crcl"
+        }
+      },
+      "end": "\"",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.end.crcl"
+        }
+      },
+      "name": "string.quoted.double.filename.crcl",
+      "patterns": [
+        {
+          "match": "[^./0-9A-Z_a-z]",
+          "name": "invalid.illegal.filename-character.crcl"
+        }
+      ]
+    },
+    {
+      "match": "[0-9A-Z_a-z]+",
+      "name": "variable.other.name.crcl"
+    },
+    {
+      "match": "[()]",
+      "name": "punctuation.section.parens.crcl"
+    },
+    {
+      "match": "[{}]",
+      "name": "punctuation.definition.attributes.crcl"
+    },
+    {
+      "match": ":",
+      "name": "storage.type.annotation.crcl"
+    },
+    {
+      "match": "\\.",
+      "name": "keyword.operator.accessor.namespace.crcl"
+    },
+    {
+      "match": ";",
+      "name": "punctuation.terminator.statement.crcl"
+    },
+    {
+      "match": "=",
+      "name": "keyword.operator.assignment.crcl"
+    },
+    {
+      "match": "@",
+      "name": "keyword.declaration.function.crcl"
+    }
+  ]
+}

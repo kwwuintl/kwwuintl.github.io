@@ -1,3 +1,8 @@
 base_url = "https://kwwuintl.github.io"
 
 compile_sass = true
+
+[markdown.highlighting]
+extra_grammars = ["extra/crcl.json"]
+light_theme = "catppuccin-latte"
+dark_theme = "catppuccin-mocha"

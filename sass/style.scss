@@ -9,7 +9,7 @@ body {
   margin: 4rem auto;
   padding: 0 8ch;
 
-  background: var(--base00);
+  background-color: var(--base00);
   color: var(--base05);
 
   font-family: "IBM Plex Mono";
@@ -67,6 +67,28 @@ ul {
 
 li::before {
   content: "> ";
+}
+
+pre {
+  margin: 2rem 0;
+}
+
+pre code[data-name]::before {
+  content: attr(data-name);
+  float: right;
+}
+
+.giallo {
+  background-color: var(--base01) !important;
+}
+
+/* .giallo-ln { */
+  /* background-color: var(--base05); */
+  /* color: var(--base00) !important; */
+/* } */
+
+.giallo-ln::after {
+  content: " ";
 }
 
 a {

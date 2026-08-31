@@ -5,7 +5,7 @@ title = "desk"
 subtitle = [
   "books",
   "papers",
-  "<a href=\"/pdf.js/web/viewer.html\">pdf.js viewer</a>"
+  "<a href=\"/pdf.js/web/viewer.html\">pdf.js viewer</a>",
 ]
 updated = "2026-08-31"
 +++
