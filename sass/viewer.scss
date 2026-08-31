@@ -7,6 +7,8 @@
   }
 }
 
-*, *::before, *::after {
+*:not(.textLayer span),
+*:not(.textLayer span)::before,
+*:not(.textLayer span)::after {
   font-family: "IBM Plex Mono" !important;
 }
