@@ -1,48 +1,4 @@
-@font-face {
-  font-family: "IBM Plex Mono";
-  src: url("/fonts/IBM Plex Mono Var-Roman.woff2") format("woff2");
-  font-weight: 100 700;
-  font-style: normal;
-  font-display: block;
-}
-
-@font-face {
-  font-family: "IBM Plex Mono";
-  src: url("/fonts/IBM Plex Mono Var-Italic.woff2") format("woff2");
-  font-weight: 100 700;
-  font-style: italic;
-  font-display: block;
-}
-
-$light: (
-  base00: #eff1f5,
-  base05: #4c4f69,
-  base04: #acb0be,
-  base0D: #1e66f5
-);
-
-$dark: (
-  base00: #1e1e2e,
-  base05: #cdd6f4,
-  base04: #585b70,
-  base0D: #89b4fa
-);
-
-:root {
-  color-scheme: light dark;
-
-  @each $name, $value in $light {
-    --#{$name}: #{$value};
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    @each $name, $value in $dark {
-      --#{$name}: #{$value};
-    }
-  }
-}
+@use "theme";
 
 * {
   box-sizing: border-box;

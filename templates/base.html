@@ -1,17 +1,17 @@
-{% macro render(title, subtitle, content, updated) %}
+{% macro input(title, subtitle="", content, updated="") %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{{ title }}</title>
-    <link rel="stylesheet" href="{{ get_url(path='style.css') }}">
+    <link rel="stylesheet" href="/style.css">
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         document.querySelectorAll('a[href]').forEach(a => {
-          if (a.origin !== location.origin) {
+          if (a.protocol !== "javascript:" && a.hostname !== location.hostname) {
             a.target = "_blank";
-            a.rel = "noopener";
+            a.rel = "noreferrer";
           }
         });
       });

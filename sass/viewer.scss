@@ -1,0 +1,12 @@
+@use "theme";
+
+@media (prefers-color-scheme: dark) {
+  #viewerContainer,
+  #thumbnailsView {
+    filter: hue-rotate(180deg) invert(1);
+  }
+}
+
+body {
+  font-family: "IBM Plex Mono";
+}

@@ -1,8 +1,8 @@
 {% import "base.html" as base %}
 
-{{ base::render(
+{{ base::input(
   title=section.title,
   subtitle=section.extra.subtitle,
   content=section.content,
-  updated=section.extra.updated
+  updated=section.extra.updated,
 ) }}
