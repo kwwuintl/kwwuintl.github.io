@@ -1,4 +1,4 @@
-const CACHE_NAME = "desk-v2";
+const CACHE_NAME = "desk-build";
 const PRECACHE_MANIFEST = "/precache.json";
 
 self.addEventListener("install", (event) => {
