@@ -1,5 +1,12 @@
 {
   "name": "desk",
   "start_url": "/desk/",
-  "display": "standalone"
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/desk/512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
 }
