@@ -1,6 +1,7 @@
 {
   "name": "desk",
   "start_url": "/desk/",
+  "scope": "/",
   "display": "standalone",
   "icons": [
     {
