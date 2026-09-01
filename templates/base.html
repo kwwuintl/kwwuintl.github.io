@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{{ title }}</title>
     <link rel="stylesheet" href="/style.css">
+    {% if current_path is defined %}
+      {% if current_path == "/desk" or current_path is starting_with("/desk/") %}
+        <link rel="manifest" href="/desk/manifest.webmanifest">
+      {% endif %}
+    {% endif %}
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         document.querySelectorAll('a[href]').forEach(a => {
