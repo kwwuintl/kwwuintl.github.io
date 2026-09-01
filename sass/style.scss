@@ -73,7 +73,11 @@ pre {
   margin: 2rem 0;
 }
 
-pre code[data-name]::before {
+code {
+  font-family: "IBM Plex Mono";
+}
+
+code[data-name]::before {
   content: attr(data-name);
   float: right;
 }
@@ -81,11 +85,6 @@ pre code[data-name]::before {
 .giallo {
   background-color: var(--base01) !important;
 }
-
-/* .giallo-ln { */
-  /* background-color: var(--base05); */
-  /* color: var(--base00) !important; */
-/* } */
 
 .giallo-ln::after {
   content: " ";

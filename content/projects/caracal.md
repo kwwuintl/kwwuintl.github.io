@@ -5,15 +5,13 @@ title = "caracal"
 subtitle = [
   "type theory",
 ]
-updated = "2026-08-31"
+updated = "2026-09-01"
 +++
 
 ```crcl,linenos,name=Eq.crcl
 @ { } inductive {
   self :
-    @ ( A : Sort )
-    @ ( a : A )
-    @ ( b : A )
+    @ ( A : Sort ) @ A @ A
       Sort ;
   refl :
     @ ( A : Sort )
@@ -44,17 +42,18 @@ updated = "2026-08-31"
   refl :
     @ ( A : Sort )
     @ ( a : A )
-      self A a a ;
+      self.self A a a ;
   elim :
     @ ( A : Sort )
     @ ( a : A )
     @ ( P :
           @ ( b : A )
-          @ ( _ : self A a b )
+          @ ( _ : self.self A a b )
             Sort )
-    @ ( _ : P a ( refl A a ) )
+    @ ( _ : P a ( self.refl A a ) )
     @ ( b : A )
-    @ ( t : self A a b ) P b t ;
+    @ ( t : self.self A a b )
+      P b t ;
   symm :
     @ ( A : Sort )
     @ ( a : A )
@@ -69,37 +68,25 @@ updated = "2026-08-31"
   self : Sort ;
   make :
     @ ( Obj : Sort )
-    @ ( Hom :
-          @ ( A : Obj )
-          @ ( B : Obj )
-            Sort )
+    @ ( Hom : @ Obj @ Obj Sort )
       self ;
 } + {
-  Obj :
-    @ ( Q : self )
-      Sort
-  =
+  Obj : @ self Sort =
     @ ( Q : self )
       self.elim Q (
         @ ( Obj : Sort )
-        @ ( Hom :
-              @ ( A : Obj )
-              @ ( B : Obj )
-                Sort )
+        @ ( Hom : @ Obj @ Obj Sort )
           Obj ) ;
   Hom :
     @ ( Q : self )
-    @ ( A : self.Obj Q )
-    @ ( B : self.Obj Q )
+    @ ( self.Obj Q )
+    @ ( self.Obj Q )
       Sort
   =
     @ ( Q : self )
       self.elim Q (
         @ ( Obj : Sort )
-        @ ( Hom :
-              @ ( A : Obj )
-              @ ( B : Obj )
-                Sort )
+        @ ( Hom : @ Obj @ Obj Sort )
         @ ( A : Obj )
         @ ( B : Obj )
           Hom A B ) ;
