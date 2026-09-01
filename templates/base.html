@@ -7,7 +7,7 @@
     <title>{{ title }}</title>
     <link rel="stylesheet" href="/style.css">
     {% if current_path is defined %}
-      {% if current_path == "/desk" or current_path is starting_with("/desk/") %}
+      {% if current_path is starting_with("/desk/") %}
         <link rel="manifest" href="/desk/manifest.webmanifest">
       {% endif %}
     {% endif %}
