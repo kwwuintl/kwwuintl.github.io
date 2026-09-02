@@ -6,8 +6,14 @@
 
 body {
   max-width: 80ch;
-  margin: 4rem auto;
-  padding: 0 8ch;
+  margin: {
+    block: 4rem;
+    inline: auto;
+  }
+  padding: {
+    block: 0;
+    inline: 8ch;
+  }
 
   background-color: var(--base00);
   color: var(--base05);
@@ -21,7 +27,10 @@ footer {
   display: flex;
   justify-content: space-between;
 
-  margin: 4rem 0;
+  margin: {
+    block: 4rem;
+    inline: 0;
+  }
 
   color: var(--base04);
   font-size: 0.8rem;
@@ -32,19 +41,31 @@ footer {
 }
 
 header {
-  margin: 4rem 0;
+  margin: {
+    block: 4rem;
+    inline: 0;
+  }
 }
 
 h1 {
   margin: 0;
-  font-size: 1.6rem;
-  font-weight: 600;
+
+  font: {
+    size: 1.6rem;
+    weight: 600;
+  }
 }
 
 h2 {
-  margin: 2rem 0 0;
-  font-size: inherit;
-  font-weight: 600;
+  margin: {
+    block: 2rem;
+    inline: 0;
+  }
+
+  font: {
+    size: 1.2rem;
+    weight: 600;
+  }
 }
 
 .subtitle {
@@ -59,13 +80,10 @@ p {
   margin: 0;
 }
 
-blockquote {
-  margin: 2rem 0;
-}
-
 ul {
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
 
@@ -73,25 +91,29 @@ li::before {
   content: "> ";
 }
 
+blockquote,
 pre {
-  margin: 2rem 0;
+  margin: {
+    block: 2rem;
+    inline: 0;
+  }
 }
 
 code {
   font-family: "IBM Plex Mono";
-}
 
-code[data-name]::before {
-  content: attr(data-name);
-  float: right;
+  &[data-name]::before {
+    content: attr(data-name);
+    float: right;
+  }
 }
 
 .giallo {
   background-color: var(--base01) !important;
-}
 
-.giallo-ln::after {
-  content: " ";
+  &-ln::after {
+    content: " ";
+  }
 }
 
 a {
