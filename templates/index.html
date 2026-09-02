@@ -2,7 +2,7 @@
 
 {{ base::input(
   title=section.title,
-  subtitle=section.extra.subtitle | default(value=""),
+  subtitle=section.extra.subtitle | default(value=[]),
   content=section.content,
   updated=section.extra.updated | default(value=""),
 ) }}
