@@ -1,16 +1,18 @@
-const CACHE_NAME = "desk-v1";
-
-const PRECACHE_URLS = [
-  "/",
-  "/desk/",
-  "/desk/512.png",
-  "/desk/manifest.webmanifest",
-  "/style.css",
-];
+const CACHE_NAME = "desk-v2";
+const PRECACHE_MANIFEST = "/precache.json";
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(PRECACHE_URLS)),
+    caches.open(CACHE_NAME).then(async (cache) => {
+      const response = await fetch(PRECACHE_MANIFEST);
+
+      if (!response.ok) {
+        throw new Error("Could not load the precache manifest");
+      }
+
+      const urls = await response.json();
+      await cache.addAll([PRECACHE_MANIFEST, ...urls]);
+    }),
   );
   self.skipWaiting();
 });
