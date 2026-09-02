@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ title }}</title>
     <link rel="stylesheet" href="/style.css">
     {% if current_path is defined %}
@@ -12,7 +12,9 @@
         <script>
           if ("serviceWorker" in navigator) {
             window.addEventListener("load", () => {
-              navigator.serviceWorker.register("/sw.js", { scope: "/" });
+              navigator.serviceWorker.register("/sw.js", {
+                scope: "/"
+              });
             });
           }
         </script>
@@ -30,8 +32,13 @@
     </script>
   </head>
   <body>
-    <header>
-      <nav>
+    <nav>
+      <div>
+        {% if updated %}
+        <span>updated: {{ updated }}</span>
+        {% endif %}
+      </div>
+      <div>
         <span>
           <a href="javascript:history.back()">back</a>
         </span>
@@ -41,7 +48,9 @@
         <span>
           <a href="..">parent</a>
         </span>
-      </nav>
+      </div>
+    </nav>
+    <header>
       <h1>{{ title }}</h1>
       {% if subtitle %}
       <p class="subtitle">
@@ -60,13 +69,10 @@
           <a href="mailto:kwwuintl23@outlook.com">email</a>
         </span>
         <span>
-          <a href="https://github.com/kwwuintl">github</a>
+          <a href="https://github.com/kwwuintl/">github</a>
         </span>
       </div>
       <div>
-        {% if updated %}
-        <span>updated: {{ updated }}</span>
-        {% endif %}
         <span>&copy; 2026 kong wing wu</span>
         <span>all rights reserved</span>
       </div>

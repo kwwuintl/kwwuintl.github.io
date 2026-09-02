@@ -16,12 +16,12 @@ body {
   line-height: 1.6;
 }
 
-header {
-  margin: 4rem 0;
-}
+nav,
+footer {
+  display: flex;
+  justify-content: space-between;
 
-nav {
-  text-align: right;
+  margin: 4rem 0;
 
   color: var(--base04);
   font-size: 0.8rem;
@@ -31,18 +31,20 @@ nav {
   }
 }
 
+header {
+  margin: 4rem 0;
+}
+
 h1 {
   margin: 0;
   font-size: 1.6rem;
   font-weight: 600;
 }
 
-p {
-  margin: 0;
-}
-
-blockquote {
-  margin: 2rem 0;
+h2 {
+  margin: 2rem 0 0;
+  font-size: inherit;
+  font-weight: 600;
 }
 
 .subtitle {
@@ -53,10 +55,12 @@ blockquote {
   }
 }
 
-h2 {
-  margin: 2rem 0 0;
-  font-size: inherit;
-  font-weight: 600;
+p {
+  margin: 0;
+}
+
+blockquote {
+  margin: 2rem 0;
 }
 
 ul {
@@ -96,20 +100,6 @@ a {
 
   &:hover {
     text-decoration: underline;
-  }
-}
-
-footer {
-  display: flex;
-  justify-content: space-between;
-
-  margin: 4rem 0;
-
-  color: var(--base04);
-  font-size: 0.8rem;
-
-  span:not(:last-child)::after {
-    content: " - ";
   }
 }
 

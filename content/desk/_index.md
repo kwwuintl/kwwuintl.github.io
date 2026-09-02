@@ -6,8 +6,9 @@ subtitle = [
   "books",
   "papers",
   "<a href=\"/pdf.js/web/viewer.html\">pdf.js viewer</a>",
+  "resources",
 ]
-updated = "2026-08-31"
+updated = "2026-09-02"
 +++
 
 > This desk is not intended for visitors.
@@ -34,3 +35,13 @@ updated = "2026-08-31"
 <br>
 
 - [0000/0560] [The Theory of Quantum Information](https://jhwatrous.github.io/TQI.pdf)
+
+<hr>
+
+- [extended Backus&ndash;Naur form](https://www.iso.org/standard/26153.html)
+- [semantic versioning](https://semver.org/)
+- [conventional commits](https://www.conventionalcommits.org/)
+
+<br>
+
+- [rust](https://rust-lang.org/)
