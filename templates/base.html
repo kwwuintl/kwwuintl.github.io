@@ -23,7 +23,7 @@
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         document.querySelectorAll('a[href]').forEach(a => {
-          if (a.protocol !== "javascript:" && a.hostname !== location.hostname) {
+          if (["http:", "https:"].includes(a.protocol) && a.origin !== location.origin) {
             a.target = "_blank";
             a.rel = "noreferrer";
           }
