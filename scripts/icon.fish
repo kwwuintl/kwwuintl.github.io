@@ -10,7 +10,7 @@ echo '<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="
       <use href="#path-2" />
     </clipPath>
   </defs>
-  <g fill="none" stroke="#fff" stroke-width="2">
+  <g fill="#fff" stroke="#fff" stroke-width="2">
     <use href="#path-1" clip-path="url(#clip-path-1)" />
     <use href="#path-2" clip-path="url(#clip-path-2)" />
   </g>
