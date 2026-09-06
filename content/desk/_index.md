@@ -8,7 +8,7 @@ subtitle = [
   "<a href=\"/pdf.js/web/viewer.html\">pdf.js viewer</a>",
   "resources",
 ]
-updated = "2026-09-02"
+updated = "2026-09-06"
 +++
 
 > This desk is not intended for visitors.
@@ -34,7 +34,7 @@ updated = "2026-09-02"
 
 <br>
 
-- [0000/0560] [The Theory of Quantum Information](https://jhwatrous.github.io/TQI.pdf)
+- [Quantum Information](https://www.preskill.caltech.edu/ph229/)
 
 <hr>
 

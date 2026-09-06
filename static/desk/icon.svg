@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="-18 -18 36 36">
+  <defs>
+    <path id="path-1" d="M-6-8V 8L6-8Z" />
+    <path id="path-2" d="M 6-8H-6L6 8Z" />
+    <clipPath id="clip-path-1">
+      <use href="#path-1" />
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <use href="#path-2" />
+    </clipPath>
+  </defs>
+  <g fill="none" stroke="#000" stroke-width="2">
+    <use href="#path-1" clip-path="url(#clip-path-1)" />
+    <use href="#path-2" clip-path="url(#clip-path-2)" />
+  </g>
+</svg>

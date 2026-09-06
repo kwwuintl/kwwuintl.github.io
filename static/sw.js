@@ -1,28 +1,7 @@
-const CACHE_NAME = "desk-v3";
-const PRECACHE_MANIFEST = "/precache.json";
+const CACHE_NAME = "desk-v6";
 
 self.addEventListener("install", (event) => {
-  event.waitUntil(
-    (async () => {
-      const cache = await caches.open(CACHE_NAME);
-      const response = await fetch(PRECACHE_MANIFEST, { cache: "no-store" });
-
-      if (!response.ok) {
-        throw new Error("Could not load the precache manifest");
-      }
-
-      const manifest = await response.clone().json();
-
-      if (!Array.isArray(manifest) || !manifest.every((url) => typeof url === "string")) {
-        throw new TypeError("The precache manifest must be an array of URLs");
-      }
-
-      const urls = [...new Set(manifest)].filter((url) => url !== PRECACHE_MANIFEST);
-      await cache.put(PRECACHE_MANIFEST, response);
-      await cache.addAll(urls);
-      await self.skipWaiting();
-    })(),
-  );
+  event.waitUntil(self.skipWaiting());
 });
 
 self.addEventListener("activate", (event) => {
@@ -49,7 +28,24 @@ self.addEventListener("fetch", (event) => {
         ignoreSearch: event.request.mode === "navigate",
       });
 
-      return cached || fetch(event.request);
+      if (cached) return cached;
+
+      const response = await fetch(event.request);
+      const url = new URL(event.request.url);
+
+      if (
+        url.origin === self.location.origin &&
+        response.status === 200 &&
+        !event.request.headers.has("range")
+      ) {
+        try {
+          await cache.put(event.request, response.clone());
+        } catch (error) {
+          console.warn("Could not cache response", event.request.url, error);
+        }
+      }
+
+      return response;
     })(),
   );
 });
