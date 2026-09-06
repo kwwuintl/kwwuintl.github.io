@@ -1,4 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="-10 -10 20 20">
+echo '<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="-12 -12 24 24">
+  <rect x="-12" y="-12" width="24" height="24" fill="#000" />
   <defs>
     <path id="path-1" d="M-6-8V 8L6-8Z" />
     <path id="path-2" d="M 6-8H-6L6 8Z" />
@@ -9,8 +10,8 @@
       <use href="#path-2" />
     </clipPath>
   </defs>
-  <g fill="none" stroke="#000" stroke-width="2">
+  <g fill="none" stroke="#fff" stroke-width="2">
     <use href="#path-1" clip-path="url(#clip-path-1)" />
     <use href="#path-2" clip-path="url(#clip-path-2)" />
   </g>
-</svg>
+</svg>' | magick rsvg:- -depth 8 static/icon.png
