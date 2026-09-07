@@ -28,9 +28,9 @@ updated = "2026-09-06"
 
 <hr>
 
-- [0130/0130] [quantum mechanics](https://davidtong.org/pdfs/teaching/quantum-mechanics/qm.pdf)
-- [0000/0244] [topics in quantum mechanics](https://davidtong.org/pdfs/teaching/topics-in-quantum-mechanics/topicsinqm.pdf)
-- [0000/0149] [quantum field theory](https://davidtong.org/pdfs/teaching/quantum-field-theory/qft.pdf)
+- [0130/0130] [quantum mechanics](https://davidtong.org/teaching/quantum-mechanics/)
+- [0000/0244] [topics in quantum mechanics](https://davidtong.org/teaching/topics-in-quantum-mechanics/)
+- [0000/0149] [quantum field theory](https://davidtong.org/teaching/quantum-field-theory/)
 
 <br>
 
