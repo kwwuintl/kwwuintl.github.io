@@ -38,7 +38,7 @@ updated = "2026-09-06"
 
 <hr>
 
-- [extended Backus&ndash;Naur form](https://www.iso.org/standard/26153.html)
+- [extended backus&ndash;naur form](https://www.iso.org/standard/26153.html)
 - [semantic versioning](https://semver.org/)
 - [conventional commits](https://www.conventionalcommits.org/)
 
