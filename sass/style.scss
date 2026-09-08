@@ -50,7 +50,7 @@ td {
 }
 
 body {
-  width: #{"round(down, 100% - 8ch, 1ch)"};
+  width: calc(100% - 8ch);
   max-width: 64ch;
 
   background-color: var(--base00);
