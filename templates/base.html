@@ -15,6 +15,18 @@
             a.rel = "noreferrer";
           }
         });
+
+        document.querySelectorAll('main table').forEach(table => {
+          const heading = table.querySelector(':scope > thead > tr > th:first-child');
+          if (heading?.textContent !== "progress") return;
+
+          table.querySelectorAll(':scope > tbody > tr > td:first-child').forEach(cell => {
+            const progress = cell.textContent;
+            if (["done", "queued"].includes(progress)) {
+              cell.dataset.progress = progress;
+            }
+          });
+        });
       });
     </script>
   </head>
@@ -62,7 +74,7 @@
         </span>
       </div>
       <div>
-        <span>&copy; 2026 kong wing wu</span>
+        <span>2026 kong wing wu</span>
         <span>all rights reserved</span>
       </div>
     </footer>
