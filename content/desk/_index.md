@@ -13,6 +13,13 @@ updated = "2026-09-06"
 
 > This desk is not intended for visitors.
 
+| Progress | Book |
+|:---------|:-----|
+| p. 58    | [Category Theory in Context](...) |
+| queued   | [Elements of ∞-Category Theory](...) |
+| ch. 7    | [Quantum Information](...) |
+| done     | [Quantum Mechanics](...) |
+
 - [0058/0252] [category theory in context](https://emilyriehl.github.io/files/context.pdf)
 - [0000/0388] [elements of &infin;-category theory](https://emilyriehl.github.io/files/elements.pdf)
 - [0000/0324] [tensor categories](https://math.mit.edu/~etingof/egnobookfinal.pdf)
