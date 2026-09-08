@@ -13,10 +13,7 @@ body {
     block: 2rlh;
     inline: auto;
   }
-  padding: {
-    block: 0;
-    inline: 8ch;
-  }
+  padding: 0;
 }
 
 nav,
@@ -53,7 +50,8 @@ td {
 }
 
 body {
-  max-width: 80ch;
+  width: #{"round(down, 100% - 8ch, 1ch)"};
+  max-width: 64ch;
 
   background-color: var(--base00);
   color: var(--base05);
@@ -114,18 +112,35 @@ th {
 
 th,
 td {
+  position: relative;
+  vertical-align: top;
+  padding-inline-start: 3ch;
+
+  &:first-child {
+    padding-inline-start: 2ch;
+  }
+
+  &:last-child {
+    padding-inline-end: 2ch;
+  }
+
   &::before {
-    content: "\00a0|\00a0";
+    content: "|";
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 1ch;
     color: var(--base04);
   }
 
   &:first-child::before {
-    content: "|\00a0";
+    inset-inline-start: 0;
   }
 
   &:last-child::after {
-    content: "\00a0|";
-    float: right;
+    content: "|";
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-end: 0;
     color: var(--base04);
   }
 }
