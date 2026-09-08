@@ -12,7 +12,7 @@
         document.querySelectorAll('a[href]').forEach(a => {
           if (["http:", "https:"].includes(a.protocol) && a.origin !== location.origin) {
             a.target = "_blank";
-            a.rel = "noreferrer";
+            a.rel = "external noreferrer";
           }
         });
 
