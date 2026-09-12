@@ -103,6 +103,8 @@ li::before {
 }
 
 table {
+  display: block;
+  overflow-x: auto;
   border-spacing: 0;
 }
 
@@ -112,36 +114,28 @@ th {
 
 th,
 td {
-  position: relative;
-  vertical-align: top;
-  padding-inline-start: 3ch;
+  white-space: pre;
+  padding-inline-end: 1ch;
 
-  &:first-child {
-    padding-inline-start: 2ch;
-  }
-
-  &:last-child {
-    padding-inline-end: 2ch;
+  &::before,
+  &:last-child::after {
+    color: var(--base04);
   }
 
   &::before {
-    content: "|";
-    position: absolute;
-    inset-block-start: 0;
-    inset-inline-start: 1ch;
-    color: var(--base04);
+    content: "| ";
   }
 
-  &:first-child::before {
-    inset-inline-start: 0;
+  &:last-child {
+    position: relative;
+    padding-inline-end: 2ch;
   }
 
   &:last-child::after {
-    content: "|";
+    content: " |";
     position: absolute;
     inset-block-start: 0;
     inset-inline-end: 0;
-    color: var(--base04);
   }
 }
 
