@@ -8,7 +8,7 @@ subtitle = [
   "<a href=\"/pdf.js/web/viewer.html\">pdf.js viewer</a>",
   "resources",
 ]
-updated = "2026-09-15"
+updated = "2026-09-16"
 +++
 
 > This desk is not intended for visitors.
@@ -17,7 +17,7 @@ updated = "2026-09-15"
 |:---------|:-----|
 | sec. 2.2 | [category theory in context](https://emilyriehl.github.io/files/context.pdf) |
 | queued | [elements of &infin;-category theory](https://emilyriehl.github.io/files/elements.pdf) |
-| sec. 1.1.1 | [introduction to smooth manifolds](https://link.springer.com/book/10.1007/978-1-4419-9982-5) |
+| sec. 1.1.1 | [introduction to smooth manifolds](https://link.springer.com/book/10.1007/978-1-4419-9982-5/) |
 | done | [quantum mechanics](https://davidtong.org/teaching/quantum-mechanics/) |
 | sec. 1.1.2 | [topics in quantum mechanics](https://davidtong.org/teaching/topics-in-quantum-mechanics/) |
 | queued | [quantum field theory](https://davidtong.org/teaching/quantum-field-theory/) |
@@ -31,7 +31,9 @@ updated = "2026-09-15"
 | queued | [quantum information](https://www.preskill.caltech.edu/ph229/) |
 -->
 
+<!--
 <hr>
+-->
 
 <!--
 - [extended backus&ndash;naur form](https://www.iso.org/standard/26153.html)
