@@ -33,10 +33,14 @@ updated = "2026-09-15"
 
 <hr>
 
+<!--
 - [extended backus&ndash;naur form](https://www.iso.org/standard/26153.html)
 - [semantic versioning](https://semver.org/)
 - [conventional commits](https://www.conventionalcommits.org/)
+-->
 
 <!---->
 
+<!--
 - [rust](https://rust-lang.org/)
+-->
