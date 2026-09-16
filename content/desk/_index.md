@@ -15,18 +15,21 @@ updated = "2026-09-15"
 
 | progress | book |
 |:---------|:-----|
-| queued | [homotopy type theory](https://hott.github.io/book/hott-online.pdf.html) |
 | sec. 2.2 | [category theory in context](https://emilyriehl.github.io/files/context.pdf) |
-| queued | [sheaves in geometry and logic](https://link.springer.com/book/10.1007/978-1-4612-0927-0/) |
-| queued | [tensor categories](https://math.mit.edu/~etingof/egnobookfinal.pdf) |
 | queued | [elements of &infin;-category theory](https://emilyriehl.github.io/files/elements.pdf) |
 | queued | [introduction to smooth manifolds](https://link.springer.com/book/10.1007/978-1-4419-9982-5) |
 | done | [quantum mechanics](https://davidtong.org/teaching/quantum-mechanics/) |
 | sec. 1.1.2 | [topics in quantum mechanics](https://davidtong.org/teaching/topics-in-quantum-mechanics/) |
-| queued | [quantum information](https://www.preskill.caltech.edu/ph229/) |
 | queued | [quantum field theory](https://davidtong.org/teaching/quantum-field-theory/) |
 | queued | [statistical physics](https://davidtong.org/teaching/statistical-physics/) |
 | queued | [statistical field theory](https://davidtong.org/teaching/statistical-field-theory/) |
+
+<!--
+| queued | [homotopy type theory](https://hott.github.io/book/hott-online.pdf.html) |
+| queued | [sheaves in geometry and logic](https://link.springer.com/book/10.1007/978-1-4612-0927-0/) |
+| queued | [tensor categories](https://math.mit.edu/~etingof/egnobookfinal.pdf) |
+| queued | [quantum information](https://www.preskill.caltech.edu/ph229/) |
+-->
 
 <hr>
 
