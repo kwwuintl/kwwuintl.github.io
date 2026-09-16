@@ -17,11 +17,11 @@ updated = "2026-09-15"
 |:---------|:-----|
 | sec. 2.2 | [category theory in context](https://emilyriehl.github.io/files/context.pdf) |
 | queued | [elements of &infin;-category theory](https://emilyriehl.github.io/files/elements.pdf) |
-| queued | [introduction to smooth manifolds](https://link.springer.com/book/10.1007/978-1-4419-9982-5) |
+| sec. 1.1.1 | [introduction to smooth manifolds](https://link.springer.com/book/10.1007/978-1-4419-9982-5) |
 | done | [quantum mechanics](https://davidtong.org/teaching/quantum-mechanics/) |
 | sec. 1.1.2 | [topics in quantum mechanics](https://davidtong.org/teaching/topics-in-quantum-mechanics/) |
 | queued | [quantum field theory](https://davidtong.org/teaching/quantum-field-theory/) |
-| queued | [statistical physics](https://davidtong.org/teaching/statistical-physics/) |
+| sec. 1.2.4 | [statistical physics](https://davidtong.org/teaching/statistical-physics/) |
 | queued | [statistical field theory](https://davidtong.org/teaching/statistical-field-theory/) |
 
 <!--
